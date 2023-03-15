@@ -7,3 +7,5 @@ class Person(models.Model):
     age = models.IntegerField()
     description = models.TextField(max_length=500, null=True,blank=True)
     image = models.ImageField(upload_to='pictures', default="default_persons.jpg")
+    def __str__(self):
+        return self.name
